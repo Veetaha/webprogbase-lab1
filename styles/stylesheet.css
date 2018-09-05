@@ -1,0 +1,96 @@
+body{
+    background: url("../images/background.jpg") no-repeat fixed;
+    background-size: cover;
+    color: white;
+    font-size: 1.4em;
+    font-family: Ubuntu, sans-serif;
+}
+
+fieldset {
+    background: rgba(0,0,0,0.7);
+}
+
+#selfie{
+    width: 20%;
+    float: right;
+    border: 0.1em solid;
+}
+
+h2, #self-affair-fieldset{
+    alignment: center;
+    margin: 0 5%;
+}
+
+table{
+    border-collapse: collapse;
+    border: none gray;
+}
+
+.contact-img{
+    width: 0.8em;
+}
+
+.person-data-label{
+    font-style: italic;
+}
+
+.person-text-data{
+    font-style: normal;
+}
+
+
+.parenthesized-OL {
+    counter-reset: list;
+    margin: 0;
+}
+
+.parenthesized-OL > li {
+    list-style: none;
+    position: relative;
+}
+
+.parenthesized-OL > li::before {
+    counter-increment: list;
+    content: counter(list, lower-alpha) ") ";
+    position: absolute;
+    font-weight: bold;
+    left: -1.15em;
+}
+
+.dev-tool-title {
+    color: gold;
+    font-weight: bold;
+
+}
+
+a{
+    color: orangered;
+}
+
+.container-general-data{
+    padding: 0.5em;
+    border-left: 0.3em solid orangered;
+    background-color: rgba(74,36,21,0.95);
+}
+
+ol, ul{
+    padding: 0.5em 0.5em 0.5em 1.5em;
+    border-left: 0.3em solid dodgerblue;
+    background-color: rgba(74,36,21,0.95);
+}
+
+#contacts {
+    margin: 2em 0 0;
+    background-color:  rgba(34,22,46,0.9);
+}
+
+#contacts > h2 {
+    /*margin: auto 0 0;*/
+    padding: 0.2em 0;
+    text-align: center;
+}
+
+#contacts > ul {
+    margin-top: 0;
+    background-color: rgba(0,0,0,0);
+}
