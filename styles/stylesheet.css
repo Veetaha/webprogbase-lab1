@@ -10,12 +10,6 @@ fieldset {
     background: rgba(0,0,0,0.7);
 }
 
-#selfie{
-    width: 20%;
-    float: right;
-    border: 0.1em solid;
-}
-
 h2, #self-affair-fieldset{
     alignment: center;
     margin: 0 5%;
@@ -88,6 +82,10 @@ ol, ul{
     /*margin: auto 0 0;*/
     padding: 0.2em 0;
     text-align: center;
+}
+
+img {
+    width: 200px;
 }
 
 #contacts > ul {
