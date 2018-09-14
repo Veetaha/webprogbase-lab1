@@ -1,7 +1,9 @@
 {
   "name": "lab1",
-  "version": "1.0.0",
-  "dependencies": {
-    
+  "version": "0.0.0",
+  "private": true,
+  "directories": {},
+  "devDependencies": {
+    "types": "*"
   }
 }

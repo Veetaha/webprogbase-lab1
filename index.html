@@ -2,21 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Itcompiles</title>
+    <title>Veetaha</title>
     <link rel="stylesheet" href="styles/stylesheet.css">
+    <script src="build/app.js" defer></script>
 </head>
 <body>
-    <fieldset id="self-affair-fieldset">
-        <legend>
-            <strong>Main</strong>
-        </legend>
-        <button><a href="users.html">View users list</a></button>
-        <h2>Itcompiles</h2>
-        <p>Itcompiles is an advanced programming task dispenser.</p>
-        <img src="images/gmail.png">
-    </fieldset>
-</body>
-<footer>
+<!--
+    Slide menu architecture according to:
+    http://devacademy.ru/posts/kak-sozdat-bokovoe-vypadaiushchee-meniu-s-pomoshchiu-css-i-jquery/
+-->
+    <div id="main-menu-button" class="slide-button">
+        <div class="slide-button-bar slide-button-top"></div>
+        <div class="slide-button-bar slide-button-middle"></div>
+        <div class="slide-button-bar slide-button-bottom"></div>
+    </div>
+    <div class="slide-menu" id="main-menu">
+        <div class='slide-menu-content'>
+            <ul class="menu" >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Tasks</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
 
-</footer>
+    <img id="vee-logo" src="images/vee-white-logo.png">
+    <div class="central-container">
+        <p>
+            Veetaha is an advanced programming task dispenser.
+            This site provides a platform for studding and publishing
+            tasks devoted to computer science sphere.
+            Register a new account and contact with your tutor
+            in order to view his educational materials and be able to
+            do corresponding assignments.
+
+        </p>
+    </div>
+</body>
 </html>

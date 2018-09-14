@@ -1,37 +1,25 @@
 body{
-    background: url("../images/background.jpg") no-repeat fixed;
-    background-size: cover;
+    /*background: url("../images/background.jpg") no-repeat fixed;*/
+    /*background-size: cover;*/
     color: white;
-    font-size: 1.4em;
+    background-color: darkslategray;
     font-family: Ubuntu, sans-serif;
 }
-
-fieldset {
-    background: rgba(0,0,0,0.7);
+#vee-logo {
+    display: block;
+    margin: 0 auto;
 }
 
-h2, #self-affair-fieldset{
+h2, .central-container {
+    font-size: 1.4em;
     alignment: center;
-    margin: 0 5%;
+    margin: 0 25%;
 }
 
 table{
     border-collapse: collapse;
     border: none gray;
 }
-
-.contact-img{
-    width: 0.8em;
-}
-
-.person-data-label{
-    font-style: italic;
-}
-
-.person-text-data{
-    font-style: normal;
-}
-
 
 .parenthesized-OL {
     counter-reset: list;
@@ -40,55 +28,119 @@ table{
 
 .parenthesized-OL > li {
     list-style: none;
-    position: relative;
+    position:   relative;
 }
 
 .parenthesized-OL > li::before {
     counter-increment: list;
-    content: counter(list, lower-alpha) ") ";
-    position: absolute;
-    font-weight: bold;
-    left: -1.15em;
+    content:           counter(list, lower-alpha) ") ";
+    position:          absolute;
+    font-weight:       bold;
+    left:              -1.15em;
 }
 
-.dev-tool-title {
+/*ol, ul{*/
+    /*padding: 0.5em 0.5em 0.5em 1.5em;*/
+    /*border-left: 0.3em solid dodgerblue;*/
+    /*background-color: rgba(74,36,21,0.95);*/
+/*}*/
+
+
+/********|slide-button|********/
+.slide-button {
+    position:   fixed;
+    width:        26px;
+    padding:      4px;
+    transition:  .25s;
+    z-index:       15;
+}
+.slide-button:hover {
+    cursor: pointer;
+}
+.slide-button .slide-button-bar {
+    position:      relative;
+    border-radius:      2px;
+    width:             100%;
+    transition:         .5s;
+    border:        6px solid white;
+    border-bottom:     none;
+}
+.slide-button-top {
+    /*top: 0;*/
+}
+.slide-button .slide-button-middle {
+    margin-top:    4px;
+    margin-bottom: 4px;
+}
+/*********menu-open|*********/
+.slide-button-open .slide-button-top,
+.slide-button-open .slide-button-bottom {
+    transition: .5s;
+}
+.slide-button-open .slide-button-top {
+    transform: rotate(45deg) translateY(-3px);
+    transform-origin: top left;
+}
+.slide-button-open .slide-button-middle {
+    transform:  translate(500%);
+    transition: .1s ease-in;
+    opacity:    0;
+}
+.slide-button-open .slide-button-bottom {
+    transform: rotate(-45deg) translateY(4px);
+    transform-origin: bottom left;
+}
+/*********slide-menu|*********/
+.slide-menu {
+    background-color: orangered;
+    position:      fixed;
+    top:               0;
+    left:              0;
+    height:         100%;
+    width:           15%;
+    margin-left:    -15%;
+    font-size:     1.5em;
+    font-weight:    bold;
+    overflow:       auto;
+    transition:    0.25s;
+    z-index:          10;
+}
+.slide-menu a {
+    text-decoration: none;
+}
+.slide-menu a:hover {
     color: gold;
-    font-weight: bold;
-
+}
+.slide-menu-content {
+    position:    relative;
+    margin-top:  5%;
+}
+.slide-menu-show {
+    margin-left: 0;
+    box-shadow: 0 0 40px 1px #151515;
+}
+.slide-menu ul {
+    list-style: none;
+}
+.slide-menu li {
+    padding: 18px 5px 0;
+}
+.slide-menu li > a {
+    color: #f3f3f3;
+    font-size: 1.18em;
+    position: relative;
+}
+.slide-menu li > a::after {
+    visibility:       hidden;
+    content:              "";
+    display:           block;
+    position:       absolute;
+    width:                 0;
+    transition: .2s ease-out;
+    border:   2px solid gold;
+}
+.slide-menu li > a:hover::after {
+    visibility: visible;
+    width:      100%;
 }
 
-a{
-    color: orangered;
-}
-
-.container-general-data{
-    padding: 0.5em;
-    border-left: 0.3em solid orangered;
-    background-color: rgba(74,36,21,0.95);
-}
-
-ol, ul{
-    padding: 0.5em 0.5em 0.5em 1.5em;
-    border-left: 0.3em solid dodgerblue;
-    background-color: rgba(74,36,21,0.95);
-}
-
-#contacts {
-    margin: 2em 0 0;
-    background-color:  rgba(34,22,46,0.9);
-}
-
-#contacts > h2 {
-    /*margin: auto 0 0;*/
-    padding: 0.2em 0;
-    text-align: center;
-}
-
-img {
-    width: 200px;
-}
-
-#contacts > ul {
-    margin-top: 0;
-    background-color: rgba(0,0,0,0);
-}

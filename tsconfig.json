@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+    /* Basic Options */
+    "outDir": "build",
+//      "lib": ["esnext.asynciterable"],
+    "target": "esnext",
+    "module": "esnext",
+    "sourceMap":      false,
+    "declaration":    false, /* Generates corresponding '.d.ts' file. */
+    "declarationMap": false, /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    "experimentalDecorators":     true,
+    "strict":                     true,
+    "noUnusedLocals":             true,
+    "noUnusedParameters":         true,
+    "noImplicitAny":              true,
+    "noImplicitThis":             true,
+    "noImplicitReturns":          true,
+    "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
+    /* Module Resolution Options */
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"]
+}
