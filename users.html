@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <title>Users list</title>
     <link rel="stylesheet" href="styles/stylesheet.css">
+    <script src="build/app.js" defer></script>
 </head>
-    <button><a href="index.html">Home</a></button>
-    <h1>Users</h1>
-    <ul>
-        <li><a href="user1.html">Vitas 1</a></li>
-        <li><a href="user2.html">Danya 2</a></li>
-    </ul>
 <body>
+    <div id="menu-placeholder"></div>
 
+    <div class="central-container">
+        <table id="users-table">
+            <caption>Users</caption>
+            <thead>
+                <tr>
+                    <th>Login</th>
+                    <th>Fullname</th>
+                    <th>Registered</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="user1.html">drectar@gmail.com</a></td>
+                <td><a href="user1.html">Vitas Kachanov</a></td>
+                <td>01.09.18</td>
+            </tr>
+            <tr>
+                <td><a href="user2.html">danyapes@gmail.com</a></td>
+                <td><a href="user2.html">Danya Pes</a></td>
+                <td>01.09.18</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
