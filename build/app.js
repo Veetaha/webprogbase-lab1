@@ -9,10 +9,10 @@ document.getElementById('menu-placeholder').innerHTML = `
     <div class="slide-menu" id="main-menu">
         <div class='slide-menu-content'>
             <ul class="menu" >
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/users.html">Users</a></li>
-                <li><a href="/tasks.html">Tasks</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="/webprogbase-lab1/index.html">Home</a></li>
+                <li><a href="/webprogbase-lab1/users.html">Users</a></li>
+                <li><a href="/webprogbase-lab1/tasks.html">Tasks</a></li>
+                <li><a href="/webprogbase-lab1/about.html">About</a></li>
             </ul>
         </div>
     </div>
