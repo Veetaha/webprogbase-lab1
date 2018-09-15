@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veetaha</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <script src="../build/app.js" defer></script>
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+    <div class="page-title">Async</div>
+    <div class="central-container">
+        <h3>Завдання</h3>
+        <blockquote>
+            <p>У цьому завданні рекомендується використовувати лише callback-функції для знайомства із асинхронним програмуванням (без Promise та async/await)</p>
+        </blockquote>
+        <p>Реалізувати на Node.js програму, що очікує від користувача вводу назви міста у консолі (наприклад, <code>kiev</code>).<br>
+            Після цього програма пробує знайти на файловій системі файл із назвою введеного міста та розширенням <code>.json</code> (<code>kiev.json</code>).<br>
+            Якщо файл існує - вивести його вміст у консоль і повідомити користувача про те, що інформація була отримана із файлу.<br>
+            Якщо файл відсутній - виконати <em>асинхронний</em> HTTP запит до API, де у значення URL аргумента <code>search</code> вноситься URL-закодоване (URL-encoded) введене місто, наприклад:</p>
+        <pre><code>https://api.teleport.org/api/cities/?search=kiev
+</code></pre>
+        <p>Потрібно розпарсити JSON результат запиту і отримати значення із поля за шляхом<br>
+            <code>//_embedded/city:search-results/_links[0]/city:item/href</code>, що матиме вигляд:</p>
+        <pre><code>https://api.teleport.org/api/cities/geonameid:703448/
+</code></pre>
+        <p>Виконати GET запит на отриманий URL та відповідь вивести у консоль (із повідомленням про те, що інформація взята із вебу) та <em>асинхронно</em> зберегти у файл, що матиме введену користувачем назву міста та розширення <code>.json</code>.</p>
+        <p>Програма може опрацьовувати ввід користувача без виходу з неї і шукати інформацію про нові міста.</p>
+        <h3>Додатки</h3>
+        <p>Приклад коду для зчитування вводу у консолі:</p>
+        <pre><code class="language-js">
+function askQuestion() {
+	process.stdout.write('Input city name: ');
+}
+
+function processInput(buffer) {
+	let inputString = buffer.toString().trim();
+	if (inputString) {
+	        console.log(`Entered city: '${inputString}'`);
+		// @todo get city info
+		// ...
+		askQuestion();  // ask the question again
+	} else {
+		// exit
+		console.log(`Exit.`);
+		process.stdin.end();  // stop listening input
+	}
+}
+
+process.stdin.addListener('data', processInput);
+
+askQuestion();
+
+    </code></pre>
+        <p>Код для виконання HTTP запитів (встановлення: <code>npm i fetch</code>):</p>
+        <pre><code class="language-js">let fetch = require(&quot;fetch&quot;);
+
+fetch.fetchUrl(&quot;http://example.org&quot;, function(error, meta, body) {
+    console.log(body.toString());
+});
+</code></pre>
+    </div>
+</body>
+</html>
