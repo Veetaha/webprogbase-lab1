@@ -1,30 +1,35 @@
-body{
-    /*background: url("../images/background.jpg") no-repeat fixed;*/
-    /*background-size: cover;*/
+body {
     color: #222;
     background-color: antiquewhite;
     font-family: Ubuntu, sans-serif;
+    margin: 0;
 }
-.centered-element {
+a {
+    color: #300043;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.centered-block, .centered-element {
     text-align: center;
-    display: block;
-    margin: 0 auto;
+    margin:     0 auto;
+}
+.centered-block {
+    display:    block;
 }
 .central-container {
     font-size: 1.4em;
-    margin: 0 18%;
+    margin:    0 18%;
 }
-
 .parenthesized-OL {
     counter-reset: list;
     margin: 0;
 }
-
 .parenthesized-OL > li {
     list-style: none;
     position:   relative;
 }
-
 .parenthesized-OL > li::before {
     counter-increment: list;
     content:           counter(list, lower-alpha) ") ";
@@ -32,14 +37,21 @@ body{
     font-weight:       bold;
     left:              -1.15em;
 }
+#vee-logo {
+    width: 30em;
+}
+.section-title {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0;
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px 1px #333;
 
-/*ol, ul{*/
-    /*padding: 0.5em 0.5em 0.5em 1.5em;*/
-    /*border-left: 0.3em solid dodgerblue;*/
-    /*background-color: rgba(74,36,21,0.95);*/
-/*}*/
-
-
+}
 /********|slide-button|********/
 .slide-button {
     position:   fixed;
@@ -58,20 +70,14 @@ body{
     border-radius:      2px;
     width:             100%;
     transition:         .5s;
-    border:        6px solid orangered;
+    border:        6px solid white;
     border-bottom:     none;
-}
-.slide-button-top {
-    /*top: 0;*/
 }
 .slide-button .slide-button-middle {
     margin-top:    4px;
     margin-bottom: 4px;
 }
 /*********menu-open|*********/
-.slide-button-open .slide-button-bar {
-    border-color: white;
-}
 .slide-button-open .slide-button-top,
 .slide-button-open .slide-button-bottom {
     transition: .5s;
@@ -90,19 +96,25 @@ body{
     transform-origin: bottom left;
 }
 /*********|slide-menu|*********/
+.slide-menu-container {
+    position: fixed;
+    z-index:     10;
+    height:    100%;
+    top: 0;
+    left: 0;
+}
 .slide-menu {
     background-color: orangered;
-    position:      fixed;
+    position:    absolute;
     top:               0;
-    left:              0;
+    right:             0;
     height:         100%;
-    width:           15%;
-    margin-left:    -15%;
+    width:           6em;
+    min-width:       7em;
     font-size:     1.5em;
     font-weight:    bold;
     overflow:       auto;
     transition:    0.25s;
-    z-index:          10;
 }
 .slide-menu a {
     text-decoration: none;
@@ -115,14 +127,14 @@ body{
     margin-top:  5%;
 }
 .slide-menu-show {
-    margin-left: 0;
+    transform: translateX(100%);
     box-shadow: 0 0 40px 1px #151515;
 }
 .slide-menu ul {
     list-style: none;
 }
 .slide-menu li {
-    padding: 18px 5px 0;
+    padding-top: 0.7em;
 }
 .slide-menu li > a {
     color: #f3f3f3;
@@ -147,35 +159,29 @@ body{
 
 #users-table{
     border-collapse: collapse;
-    border: solid orangered;
     text-align: center;
+    box-shadow: 0 0 15px 1px #333;
+    width: 100%;
 }
-#users-table caption {
-    font-weight: bold;
-    font-size: 1.4em;
-}
-#users-table th {
-    border-bottom: solid orangered;
+#users-table tr:nth-child(even) {
+    background-color: orangered;
+    color: white;
 }
 #users-table td, #users-table th {
     padding: 0.4em;
 }
-
-#users-table a {
-    text-decoration: none;
-    color: royalblue;
+#users-table > thead {
+    background-color: #222;
+    color: white;
 }
-
-#users-table a:hover {
-    color: darkviolet;
-}
-
 .user-avatar {
+    padding: 2px;
     border-radius: 50%;
     width: 200px;
     height: 200px;
     object-fit: cover;
     border: 6px solid orangered;
+    box-shadow: 0 0 15px 1px #333;
 }
 .user-bio::before {
     content: "BIO: ";
@@ -183,10 +189,9 @@ body{
     font-size: 1.2em;
 }
 .user-bio {
+    box-shadow: 0 0 15px 1px #333;
     margin-top: 0.5em;
     padding: 0.5em;
     height: 10em;
-    border: 10px double;
-    background-color: orangered;
-    color: white;
+    border: 5px solid #222;
 }

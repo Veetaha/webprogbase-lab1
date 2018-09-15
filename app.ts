@@ -1,4 +1,5 @@
 document.getElementById('menu-placeholder')!.innerHTML = `
+<div class="slide-menu-container">
 <div id="main-menu-button" class="slide-button">
         <div class="slide-button-bar slide-button-top"></div>
         <div class="slide-button-bar slide-button-middle"></div>
@@ -14,7 +15,8 @@ document.getElementById('menu-placeholder')!.innerHTML = `
             </ul>
         </div>
     </div>
-`
+</div>
+`;
 
 
 const mainMenu = document.getElementById('main-menu')!;
